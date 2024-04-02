@@ -8,13 +8,13 @@
             <button type="button" class="btn-close" aria-label="Close" v-on:click="hideModal"></button>
         </div>
         <div class="modal-body">
-            <codemirror
+            <!--<codemirror
                 ref="fmCodeEditor"
                 v-bind:value="code"
                 v-bind:options="cmOptions"
                 v-bind:height="editorHeight"
                 v-on:change="onChange"
-            />
+            />-->
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-info" v-on:click="updateFile">
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import Codemirror from 'codemirror-editor-vue3';
+/*import Codemirror from 'codemirror-editor-vue3';
 import 'codemirror/mode/shell/shell';
 import 'codemirror/mode/css/css';
 import 'codemirror/mode/sass/sass';
@@ -47,14 +47,14 @@ import 'codemirror/mode/swift/swift';
 import 'codemirror/mode/ruby/ruby';
 import 'codemirror/mode/go/go';
 import 'codemirror/mode/yaml/yaml';
-import 'codemirror/mode/properties/properties';
+import 'codemirror/mode/properties/properties';*/
 import modal from '../mixins/modal';
 import translate from '../../../mixins/translate';
 
 export default {
     name: 'TextEditModal',
     mixins: [modal, translate],
-    components: { Codemirror },
+    //components: { Codemirror },
     data() {
         return {
             code: '',
